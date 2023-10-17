@@ -8,7 +8,7 @@ export default class InputEngine {
 
   setGameListners() {
     this.listeners = [
-      document.aBird.playerEngine,
+     // document.aBird.playerEngine,
       document.aBird.swingEngine
     ];
 

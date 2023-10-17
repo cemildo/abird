@@ -1,3 +1,4 @@
+import './styles/style.scss'
 import { engines } from "./engines/CoreEngine";
 
 document.aBird = engines;

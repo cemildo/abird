@@ -4,7 +4,7 @@ export default class SwingArc {
 
     constructor() {
         this.x = canvasConstants.CANVAS_WIDTH * 15 / 100;
-        this.y = canvasConstants.CANVAS_HEIGHT * 70 / 100;
+        this.y = canvasConstants.CANVAS_HEIGHT * 68 / 100;
         this.radius = 80; 
         this.static = true; 
     }

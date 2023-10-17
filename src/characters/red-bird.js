@@ -2,8 +2,8 @@ import canvasConstants from "../constants/canvas-constants";
 
 export default class RedBird {
     constructor() {
-        this.x = canvasConstants.CANVAS_WIDTH * 14 / 100;
-        this.y = canvasConstants.CANVAS_HEIGHT * 70 / 100; 
+        this.x = this.getWidth();
+        this.y = this.getHeight(); 
         this.radius = 10;
         this.velocityX = 0;
         this.velocityY = 0; 
@@ -24,5 +24,13 @@ export default class RedBird {
         };
 
         this.image.setAttribute('src', this.src);
+    }
+
+    getWidth() {
+        return canvasConstants.CANVAS_WIDTH * 14 / 100;
+    }
+
+    getHeight() {
+        return canvasConstants.CANVAS_HEIGHT * 68 / 100;
     }
 }

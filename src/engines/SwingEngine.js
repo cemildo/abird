@@ -57,16 +57,23 @@ export default class SwingEngine{
     getArc() {
         return document.aBird.renderEngine.arc;
     } 
+
+    getCurrentPlayer() {
+        return document.aBird.renderEngine.getCurrentPlayer();
+    } 
  
     isInTheArea(){
         const arc = this.getArc(); 
+        const player = this.getCurrentPlayer();
         const distance = Math.sqrt((this.x) ** 2 + (this.y) ** 2);
+
+        document.aBird.playerEngine.move({x: this.x, y: this.y})
 
         if(this.currentDirection != this.lastDirection){
             return true;
         }
-        console.log(this.x , this.y, Math.atan2(this.y, this.x) * 180 / Math.PI, Math.atan2(this.y, this.x) >= Math.PI * 3/4)
-        return distance <= arc.radius / 2 && this.x <= 0  && this.isInAngles();
+        
+        return distance <= (arc.radius - player.radius) && this.x <= 0  && this.isInAngles();
     }
 
     isInAngles() {

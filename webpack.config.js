@@ -4,25 +4,25 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js", // Your entry file
+  entry: "./src/index.js",  
   output: {
-    path: path.resolve(__dirname, "dist"), // Output directory
-    filename: "bundle.js", // Output filename
+    path: path.resolve(__dirname, "dist"),  
+    filename: "bundle.js",  
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: "babel-loader", // Use Babel for JavaScript
+        use: "babel-loader",  
         exclude: /node_modules/,
       },
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader", // Translates CSS into CommonJS
-          "sass-loader", // Compiles Sass to CSS
-        ],
+          MiniCssExtractPlugin.loader, // Extract CSS into separate files
+          'css-loader',                // Translates CSS into CommonJS
+          'sass-loader'                // Compiles SCSS to CSS
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
@@ -31,7 +31,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "images", // Specify the output directory for images
+              outputPath: "images", 
             },
           },
         ],
@@ -40,10 +40,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html", // Your HTML template
+      template: "src/index.html",  
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css", // Extracted CSS filename
+      filename: "style.css",  
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: "src/images", to: "images" }],
