@@ -65,8 +65,8 @@ export default class SwingEngine{
         if(this.currentDirection != this.lastDirection){
             return true;
         }
-
-        return distance <= arc.radius && this.x <= 0  && this.isInAngles();
+        console.log(this.x , this.y, Math.atan2(this.y, this.x) * 180 / Math.PI, Math.atan2(this.y, this.x) >= Math.PI * 3/4)
+        return distance <= arc.radius / 2 && this.x <= 0  && this.isInAngles();
     }
 
     isInAngles() {

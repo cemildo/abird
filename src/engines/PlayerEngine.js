@@ -31,7 +31,6 @@ export default class PlayerEngine {
 
  
     isInTheArea(){
-        // console.log(document.aBird.swingEngine.isInTheArea());
         return document.aBird.swingEngine.isInTheArea();
     }
 }

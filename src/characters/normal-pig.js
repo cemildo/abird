@@ -1,23 +1,29 @@
+import canvasConstants from "../constants/canvas-constants";
+
 export default class NormalPig {
 
-    x = canvas.width / 2;  
-    y = canvas.height / 2;  
-    radius = 50;               
-    dotRadius = 5; 
+    constructor() {
+        this.x = canvasConstants.CANVAS_WIDTH * 80 / 100;
+        this.y = canvasConstants.CANVAS_HEIGHT * 70 / 100;
+        this.radius = 15;
+        this.width = 15;
+        this.height = 15;
+        this.velocityX = 10;
+        this.velocityY = 7; 
+        this.image = new Image();
+        this.src = './images/normal-pig.png';
+    }
 
     draw(context) {
-        img.src = 'path_to_your_image.jpg';
-
-        // Define the destination rectangle
-        const destX = 50;  // X-coordinate of the top-left corner of the destination rectangle
-        const destY = 50;  // Y-coordinate of the top-left corner of the destination rectangle
-        const destWidth = 200;  // Width of the destination rectangle
-        const destHeight = 150;  // Height of the destination rectangle
-
-        // Wait for the image to load
-        img.onload = function () {
-        // Draw the image into the destination rectangle
-           context.drawImage(img, destX, destY, destWidth, destHeight);
+        context.beginPath();
+        context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        context.closePath();
+        context.clip();
+         
+        this.image.onload =  () => {  
+            context.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius * 2, this.radius * 2);
         };
+
+        this.image.setAttribute('src', this.src);
     }
 }

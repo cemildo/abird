@@ -14,6 +14,7 @@ export default class RenderEngine {
     this.canvas = document.getElementById("canvas");
     this.context = this.canvas.getContext("2d");
     this.arc = new SwingArc();
+    this.weapon = new Weapon();
   }
 
   initialActions() {
@@ -41,6 +42,10 @@ export default class RenderEngine {
     image.setAttribute("src", "./images/background_images.jpeg");
   }
 
+  setWeapon() {
+    this.weapon.draw(this.context);
+  }
+
   setArc() {
     this.arc.draw(this.context);
   }
@@ -54,8 +59,6 @@ export default class RenderEngine {
 
   setPlayers() {
     this.players = new Array(10).fill(1).map(() => new NormalPig());
-    this.players.push(new Weapon());
-    
     this.players.push(new RedBird());
      
     document.aBird.physicEngine.setItems(this.players);
@@ -64,8 +67,8 @@ export default class RenderEngine {
   setWepaonWoods(wood, i) {
       const level = this.getWoodChunkLevel(i);
       const row = i % 4;
-      wood.y = wood.y - level * 50;
-      wood.x = wood.x + (row * 50);
+      wood.y = wood.y - level * wood.getHeight();
+      wood.x = wood.x + (row * wood.getWidth());
       return wood;
   }
 
@@ -78,6 +81,7 @@ export default class RenderEngine {
     this.clearCanvas;
     this.setBackground();
     this.setShootingHill();
+    this.setWeapon();
     this.setArc();
     document.aBird.physicEngine.run(this.context);
     requestAnimationFrame(this.render.bind(this));
