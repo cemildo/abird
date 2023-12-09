@@ -1,0 +1,22 @@
+{"frames": {
+
+	"normal-pig-1.png":
+	{
+		"frame": {"x":280,"y":293,"w":100,"h":100}
+	},
+	"red-bird-1.png":
+	{
+		"frame": {"x":280,"y":591,"w":99,"h":96, "name": "red-bird"}
+	},
+	"weapon.png":
+	{
+		"frame": {"x":0,"y":0,"w":40,"h":200, "name": "weapon"}
+	}
+},
+	"meta": {
+		"image": "figures.png",
+		"format": "RGBA8888",
+		"size": {"w":200,"h":68},
+		"scale": "1"
+	}
+}

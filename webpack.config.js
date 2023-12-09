@@ -40,6 +40,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: false,
       template: "src/index.html",  
     }),
     new MiniCssExtractPlugin({
@@ -53,7 +54,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "dist"),
     },
-    port: 8080, // Port for the dev server
+    port: 4000, // Port for the dev server
   },
   resolve: {
     fallback: {

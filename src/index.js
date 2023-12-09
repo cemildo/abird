@@ -3,5 +3,8 @@ import { engines } from "./engines/CoreEngine";
 
 document.aBird = engines;
 
-document.aBird.renderEngine.initialActions();
-document.aBird.inputEngine.initialActions();
+engines.assetEngine.load()
+  .then(() => {
+    document.aBird.renderEngine.initialActions();
+    // document.aBird.inputEngine.initialActions();
+  })

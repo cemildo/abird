@@ -5,8 +5,6 @@ const MOVING = {
     RIGHT: 'Right',
     LEFT: 'Left'
   };
-  
-
 
 export default class SwingEngine{
   
@@ -22,6 +20,7 @@ export default class SwingEngine{
       this.currentDirection = MOVING.LEFT;
       this.lastDirection = MOVING.LEFT;
     }
+
     moveLeft(){ 
         this.currentDirection = MOVING.LEFT;
         if(this.isInTheArea()) {
@@ -67,9 +66,9 @@ export default class SwingEngine{
         const player = this.getCurrentPlayer();
         const distance = Math.sqrt((this.x) ** 2 + (this.y) ** 2);
 
-        document.aBird.playerEngine.move({x: this.x, y: this.y})
+        document.aBird.playerEngine.move({x: this.x, y: this.y});
 
-        if(this.currentDirection != this.lastDirection){
+        if(this.currentDirection !== this.lastDirection){
             return true;
         }
         
@@ -81,4 +80,6 @@ export default class SwingEngine{
             ? Math.atan2(this.y, this.x) + Math.PI <= Math.PI / 4
             : Math.atan2(this.y, this.x) >= Math.PI * 3/4; 
     }
+
+
 }

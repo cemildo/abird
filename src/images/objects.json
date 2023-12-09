@@ -1,0 +1,13 @@
+{"frames": {
+
+  "normal-wood-1.png":
+  {
+    "frame": {"x":527,"y":147,"w":86,"h":86}
+  } },
+  "meta": {
+    "image": "objects.png",
+    "format": "RGBA8888",
+    "size": {"w":200,"h":68},
+    "scale": "1"
+  }
+}

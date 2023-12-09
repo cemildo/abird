@@ -1,6 +1,6 @@
-const browserHight = 500; //document.documentElement.clientHeight - 20;
+const browserHight =  document.documentElement.clientHeight;
 
 export default {
-    CANVAS_WIDTH: browserHight * 3/2,
-    CANVAS_HEIGHT: browserHight
+    CANVAS_WIDTH: document.documentElement.clientWidth - 10,
+    CANVAS_HEIGHT: document.documentElement.clientHeight -10
 }

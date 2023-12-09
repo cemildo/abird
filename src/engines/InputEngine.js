@@ -1,21 +1,21 @@
 export default class InputEngine {
   listeners = [];
+  isRegistered = false;
 
   initialActions() {
     this.setEventListener();
-    this.setGameListners();
+    this.setGameListeners();
   }
 
-  setGameListners() {
+  setGameListeners() {
     this.listeners = [
-     // document.aBird.playerEngine,
       document.aBird.swingEngine
     ];
 
   }
 
   setEventListener() {
-    window.addEventListener("keydown", this.setSpeed.bind(this), false);
+      addEventListener("keydown", this.setSpeed.bind(this), false);
   }
 
   setSpeed(evt) {

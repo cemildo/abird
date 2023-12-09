@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c071aed-6bd6-4db8-9fc0-c54cd885e46f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/engines/AssetLoaderEngine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/engines/PlacerEngine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/figures.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/figures.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/objects.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Asset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Collision.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Display.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Interactive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Sound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/normal-pig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/red-bird.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/swing-arc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/weapon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/wood.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/canvas-constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/canvas-constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/CoreEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/CoreEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/InputEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/InputEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/PlayerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlayerEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/RenderEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/RenderEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/SwingEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/SwingEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2WtB1AjaviBc96zhJyGZ2E5dRxv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/cemildogan/cddev/cemil/GameDev/aBird2/src/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c071aed-6bd6-4db8-9fc0-c54cd885e46f" name="Changes" comment="" />
+      <created>1697541779227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697541779227</updated>
+      <workItem from="1697541780164" duration="633000" />
+      <workItem from="1699808862952" duration="41100000" />
+      <workItem from="1700316237905" duration="1204000" />
+      <workItem from="1702022701054" duration="23582000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="d510d4d6-3195-434d-975f-8ccb9fa85b78" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="d510d4d6-3195-434d-975f-8ccb9fa85b78">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

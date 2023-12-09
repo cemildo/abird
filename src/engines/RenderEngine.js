@@ -1,90 +1,43 @@
-import NormalPig from "../characters/normal-pig";
-import Weapon from "../characters/weapon";
-import RedBird from "../characters/red-bird";
 import canvasConstants from "../constants/canvas-constants";
-import Wood from "../characters/wood";
-import SwingArc from "../characters/swing-arc";
+import {draggableSprites, makeCanvas, render, stage} from "../utils/Display";
+import {makePointer} from "../utils/Interactive";
 
 export default class RenderEngine {
   canvas;
   context;
   players;
+  pointer;
 
   constructor() {
-    this.canvas = document.getElementById("canvas");
-    this.context = this.canvas.getContext("2d");
-    this.arc = new SwingArc();
-    this.weapon = new Weapon();
+    this.canvas = makeCanvas(canvasConstants.CANVAS_WIDTH,
+        canvasConstants.CANVAS_HEIGHT);
+    stage.width = canvasConstants.CANVAS_WIDTH;
+    stage.height = canvasConstants.CANVAS_HEIGHT;
+    this.context = this.canvas.ctx
+    this.pointer = makePointer(this.canvas);
   }
 
   initialActions() {
     this.setBackground();
-    this.setPlayers();
-    this.setShootingHill();
+    document.aBird.placerEngine.initialActions();
+    document.aBird.playerEngine.initialActions();
+
     this.render();
-    
   }
 
   setBackground() {
-    var image = new window.Image();
-    image.addEventListener("load", () => {
-      this.canvas.width = canvasConstants.CANVAS_WIDTH;
-      this.canvas.height = canvasConstants.CANVAS_HEIGHT;
-      this.context.drawImage(
-        image,
-        0,
-        0,
-        canvasConstants.CANVAS_WIDTH,
-        canvasConstants.CANVAS_HEIGHT
-      );
-    });
-
-    image.setAttribute("src", "./images/background_images.jpeg");
+    this.canvas.style.background = 'url(images/background_images.jpeg) center/cover no-repeat';
   }
 
-  setWeapon() {
-    this.weapon.draw(this.context);
-  }
-
-  setArc() {
-    this.arc.draw(this.context);
-  }
-
-  setShootingHill(){
-    new Array(16).fill(1)
-    .map(() => new Wood())
-    .map(this.setWepaonWoods.bind(this))
-    .forEach(a => a.draw(this.context));
-  }
-
-  setPlayers() {
-    this.players = new Array(10).fill(1).map(() => new NormalPig());
-    this.players.push(new RedBird());
-     
-    document.aBird.physicEngine.setItems(this.players);
-  }
-
-  setWepaonWoods(wood, i) {
-      const level = this.getWoodChunkLevel(i);
-      const row = i % 4;
-      wood.y = wood.y - level * wood.getHeight();
-      wood.x = wood.x + (row * wood.getWidth());
-      return wood;
-  }
-
-  getWoodChunkLevel(i) {
-    if (i < 0) return 0;
-    return Math.floor(i / 5);
-  }
-
-  render(){
-    this.clearCanvas;
-    this.setBackground();
-    this.setShootingHill();
-    this.setWeapon();
-    this.setArc();
-    document.aBird.physicEngine.run(this.context);
+  render() {
     requestAnimationFrame(this.render.bind(this));
+    this.pointer.updateDragAndDrop(draggableSprites);
+    document.aBird.playerEngine.move();
+    this.play();
+  }
+
+  play() {
+    render(this.canvas)
   }
 
   clearCanvas() {
