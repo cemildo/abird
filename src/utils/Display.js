@@ -1230,7 +1230,8 @@ You can remove more than one sprite at a time like this:
 
 export function remove(...spritesToRemove) {
   spritesToRemove.forEach(sprite => {
-    sprite.parent.removeChild(sprite);
+    if(sprite.parent)
+      sprite.parent.removeChild(sprite);
   });
 }
 

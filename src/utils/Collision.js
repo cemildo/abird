@@ -351,12 +351,15 @@ function movingCircleCollision(c1, c2, global = false) {
     c2.bounce.x = p1A.x + p2B.x;
     c2.bounce.y = p1A.y + p2B.y;
 
+
     //Add the bounce vector to the circles' velocity
     //and add mass if the circle has a mass property
     c1.vx = c1.bounce.x / c1.mass;
     c1.vy = c1.bounce.y / c1.mass;
     c2.vx = c2.bounce.x / c2.mass;
     c2.vy = c2.bounce.y / c2.mass;
+    console.log(c1.vx, c1.vy, c2.vx, c2.vy)
+
   }
   return hit;
 }

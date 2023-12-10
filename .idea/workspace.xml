@@ -5,31 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c071aed-6bd6-4db8-9fc0-c54cd885e46f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/engines/AssetLoaderEngine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/engines/PlacerEngine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/figures.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/figures.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/objects.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Asset.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Collision.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Display.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Interactive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Sound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/normal-pig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/red-bird.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/swing-arc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/weapon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/wood.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/canvas-constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/canvas-constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/engines/PathFinderEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/CoreEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/CoreEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/InputEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/InputEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/PhysicsEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PhysicsEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/PlacerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlacerEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/PlayerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlayerEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/RenderEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/RenderEngine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engines/SwingEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/SwingEngine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/figures.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/figures.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/objects.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/objects.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Collision.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Collision.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Display.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Display.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +92,7 @@
       <workItem from="1697541780164" duration="633000" />
       <workItem from="1699808862952" duration="41100000" />
       <workItem from="1700316237905" duration="1204000" />
-      <workItem from="1702022701054" duration="23582000" />
+      <workItem from="1702022701054" duration="47105000" />
     </task>
     <servers />
   </component>

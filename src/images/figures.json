@@ -8,9 +8,33 @@
 	{
 		"frame": {"x":280,"y":591,"w":99,"h":96, "name": "red-bird"}
 	},
+	"red-bird-2.png":
+	{
+		"frame": {"x":40,"y":824,"w":114,"h":113, "name": "red-bird"}
+	},
+	"red-bird-3.png":
+	{
+		"frame": {"x":40,"y":710,"w":114,"h":113, "name": "red-bird"}
+	},
+	"red-bird-4.png":
+	{
+		"frame": {"x":40,"y":596,"w":114,"h":113, "name": "red-bird"}
+	},
 	"weapon.png":
 	{
 		"frame": {"x":0,"y":0,"w":40,"h":200, "name": "weapon"}
+	},
+	"pig-1.png":
+	{
+		"frame": {"x":808,"y":0,"w":128,"h":152, "name": "pig-könig"}
+	},
+	"pig-2.png":
+	{
+		"frame": {"x":580,"y":160,"w":110,"h":97, "name": "pig-mastashe"}
+	},
+	"pig-3.png":
+	{
+		"frame": {"x":280,"y":492,"w":99,"h":97, "name": "pig-smily"}
 	}
 },
 	"meta": {

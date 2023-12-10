@@ -1,8 +1,8 @@
 import {
-  circle, emitter,
+  circle, emitter, frame,
   line,
   particleEffect, particles,
-  rectangle,
+  rectangle, remove,
   sprite,
   stage
 } from "../utils/Display";
@@ -16,6 +16,7 @@ export default class PlayerEngine {
   draggableArea;
   isReady = false;
   dust;
+  restarted = false;
 
   initialActions() {
     this.setRouteContainer();
@@ -25,10 +26,11 @@ export default class PlayerEngine {
   }
 
   setPlayer() {
-
     const weapon = this.getWeaponInfo();
     const shootingHillContainer = this.getShootingHillContainer();
-    this.bird = sprite(assets["red-bird-1.png"], 1, 1);
+
+    this.restarted = true;
+    this.bird = this.bird || sprite(assets["red-bird-1.png"], 0, 0);
     this.bird.height = 50;
     this.bird.width = 50;
     this.bird.diameter = 50;
@@ -38,7 +40,7 @@ export default class PlayerEngine {
     this.bird.radius = 25;
 
     //Set the ball's velocity
-    this.bird.vx = 10;
+    this.bird.vx = 0;
     this.bird.vy = 0;
 
     //Set the ball's gravity, friction and mass
@@ -48,11 +50,13 @@ export default class PlayerEngine {
 
     //Set the mass based on the ball's diameter
     this.bird.mass = 0.75 + (this.bird.diameter / 32);
-
     this.setParticleEffect();
   }
 
   move() {
+    this.checkCollisionBetweenBirdAndKingdom();
+    this.updateParticles();
+
     if (!this.isReady) {
       return;
     }
@@ -66,15 +70,18 @@ export default class PlayerEngine {
     if (stageCollision === "bottom") {
       this.bird.frictionX = 0.4;
       this.bird.draggable = false;
+      this.dust.stop();
+
+      if(this.restarted) {
+        this.bird.vy = 0;
+        this.removeCurrentBird();
+        this.restarted = false;
+        this.isReady = false;
+      }
+
     } else {
       this.bird.frictionX = 1;
     }
-
-    this.checkCollisionBetweenBirdAndKingdom();
-    this.updateParticles();
-
-    wait(8000).then(() => console.log(""));
-
   }
 
   getWeaponInfo() {
@@ -203,19 +210,16 @@ export default class PlayerEngine {
 
   checkCollisionBetweenBirdAndKingdom() {
     const kingdomPieces = document.aBird.placerEngine.kingdom;
+    document.aBird.physicEngine.setItems(kingdomPieces.children);
+    document.aBird.physicEngine.run();
+
     kingdomPieces.children.forEach(brick => {
 
-      const stageCollision = contain(brick, stage.localBounds, true);
-
-      if (stageCollision === "bottom") {
-        brick.frictionX = 0.4;
-      } else {
-        brick.frictionX = 1;
-      }
-
-      if(movingCircleCollision(this.bird, brick, true)) {
+      if(movingCircleCollision(brick, this.bird, true)) {
         this.dust.stop();
-        kingdomPieces.removeChild(brick);
+        if(kingdomPieces) {
+          kingdomPieces.removeChild(brick);
+        }
       }
     });
   }
@@ -226,18 +230,19 @@ export default class PlayerEngine {
       assets["images/red-star.png"]
     ];
 
-    this.bird.fps = 24;
+    if(!this.bird) return;
+
     this.dust = emitter(
-        100,
+        10,
         () => particleEffect(
-            this.bird.centerX - this.bird.halfWidth,
+            this.bird.centerX,
             this.bird.centerY,
             () => sprite(dustFrames),
             10,
             0.1,
-            false,
+            true,
             2.4, 3.6,
-            12, 18,
+            8, 12,
             2, 5,
             0.005, 0.01,
             0.005, 0.01,
@@ -254,4 +259,19 @@ export default class PlayerEngine {
       }
     }
   }
+
+  removeCurrentBird() {
+    wait(2000)
+    .then(() => {
+      this.bird.visible = false;
+      return wait(200)
+    })
+    .then(() =>  {
+      this.bird.vy = 0;
+      this.setPlayer();
+      this.bird.visible = true;
+
+    })
+  }
+
 }

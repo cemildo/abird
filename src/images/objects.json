@@ -1,13 +1,31 @@
-{"frames": {
-
-  "normal-wood-1.png":
-  {
-    "frame": {"x":527,"y":147,"w":86,"h":86}
-  } },
+{
+  "frames": {
+    "normal-wood-1.png": {
+      "name": "wood",
+      "frame": {
+        "x": 527,
+        "y": 147,
+        "w": 86,
+        "h": 86
+      }
+    },
+    "normal-stone-1.png": {
+      "name": "stone",
+      "frame": {
+        "x": 699,
+        "y": 147,
+        "w": 86,
+        "h": 86
+      }
+    }
+  },
   "meta": {
     "image": "objects.png",
     "format": "RGBA8888",
-    "size": {"w":200,"h":68},
+    "size": {
+      "w": 200,
+      "h": 68
+    },
     "scale": "1"
   }
 }

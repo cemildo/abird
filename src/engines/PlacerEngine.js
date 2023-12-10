@@ -60,17 +60,29 @@ export default class PlacerEngine {
 
   setKingdomPieces() {
     const woodFn = () => {
-      const wood = sprite(assets["normal-wood-1.png"], 1, 1);
-      wood.height = 50;
-      wood.width = 50;
-      wood.circular = true;
-      wood.radius = 25;
-      wood.mass = 2;
-      wood.vy = 0;
-      wood.gravity = 0.4;
-      wood.x = this.kingdom.x;
-      wood.y = this.kingdom.height - wood.height;
-      return wood;
+      const displayElements = [
+        assets["normal-stone-1.png"],
+        assets["pig-3.png"],
+        assets["pig-1.png"],
+        assets["pig-2.png"],
+        assets["pig-1.png"],
+        assets["normal-stone-1.png"],
+        assets["pig-2.png"],
+        assets["normal-wood-1.png"],
+        assets["pig-3.png"],
+      ];
+
+      const displayItem = sprite(displayElements[randomInt(0, displayElements.length -1)], 1, 1);
+      displayItem.height = 50;
+      displayItem.width = 50;
+      displayItem.circular = true;
+      displayItem.radius = 25;
+      displayItem.mass = 0.02;
+      displayItem.vy = 0;
+      displayItem.gravity = 0.4;
+      displayItem.x = this.kingdom.x;
+      displayItem.y = this.kingdom.height - displayItem.height;
+      return displayItem;
     }
 
     new Array(30).fill(1)
@@ -107,22 +119,5 @@ export default class PlacerEngine {
     this.container.name = "shooting-hill"
     this.container.x = 50;
     this.container.y = canvasConstants.CANVAS_HEIGHT - this.container.height;
-  }
-
-  setPigKingdom() {
-    this.kingdom = grid(
-        10, 8, 48, 48,
-        false, 0, 0,
-        () => {
-          let brick = rectangle(10, 60, "red", "white", 3, 0, 0);
-          brick.radius = 20;
-          brick.mass = 2;
-          return brick;
-        },
-        //Run any extra code after each peg is made, if you want to
-        () => console.log("extra!")
-    );
-
-    this.kingdom.setPosition(canvasConstants.CANVAS_WIDTH -600 , canvasConstants.CANVAS_HEIGHT - 400);
   }
 }

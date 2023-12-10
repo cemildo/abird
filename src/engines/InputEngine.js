@@ -9,13 +9,13 @@ export default class InputEngine {
 
   setGameListeners() {
     this.listeners = [
-      document.aBird.swingEngine
+    //  document.aBird.swingEngine
     ];
 
   }
 
   setEventListener() {
-      addEventListener("keydown", this.setSpeed.bind(this), false);
+     // addEventListener("keydown", this.setSpeed.bind(this), false);
   }
 
   setSpeed(evt) {

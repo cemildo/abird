@@ -6,6 +6,7 @@ import SoundEngine from "./SoundEngine"
 import SwingEngine from "./SwingEngine"
 import AssetLoaderEngine from "./AssetLoaderEngine";
 import PlacerEngine from "./PlacerEngine";
+import PathFinderEngine from "./PathFinderEngine";
 
 export const engines = {
     renderEngine: new RenderEngine(),
@@ -14,6 +15,7 @@ export const engines = {
     swingEngine: new SwingEngine(),
     inputEngine: new InputEngine(),
     assetEngine: new AssetLoaderEngine(),
-    placerEngine: new PlacerEngine()
+    placerEngine: new PlacerEngine(),
+    pathFinderEngine: new PathFinderEngine()
     // soundEngine: new SoundEngine()
 }

@@ -1,61 +1,48 @@
 import canvasConstants from "../constants/canvas-constants";
+import {rectangleCollision} from "../utils/Collision";
 export default class PhysicsEngine {
-    gravity = 0.1;
+    gravity = 0.4;
     restitution = 0.8;
-    damping = 0.98;
+    damping = 2.98;
     items = [];
 
     setItems(items) {
         this.items = items;
     }
 
-    run(context) {
+    run() {
         this.items.forEach(item => {
-            if (!item.static) {
-                item.velocityY += this.gravity;
-                item.x += item.velocityX;
-                item.y += item.velocityY;
-                item.velocityX *= this.damping;
-                item.velocityY *= this.damping;
-            }
+
+            item.vy += this.gravity;
+            item.y += item.vy;
 
             this.checkCollisionWithBoundaries(item);
             this.checkCollisionWithOtherItems(item);
 
-            item.draw(context);
         });
     }
 
     checkCollisionWithOtherItems(item) {
         this.items.forEach(otherItem => {
             if (item !== otherItem) {
-                const { x, y } = this.getCoordinatesDifferences(item, otherItem);
-                const distance = Math.hypot(x, y);
-
-                if (distance < item.radius + otherItem.radius) {
-                    const angle = Math.atan2(y, x);
-                    this.setVelocity(item, angle);
-                    this.setVelocity(otherItem, angle);
-                    this.avoidSticking(item, otherItem, angle, distance);
+                if (rectangleCollision(item, otherItem, true, true)) {
+                    this.setVelocity(item, Math.PI / 2);
+                    this.setVelocity(otherItem, Math.PI / 2);
+                    this.avoidSticking(item, otherItem, Math.PI / 2, item.width);
                 }
             }
         });
     }
 
     avoidSticking(item, otherItem, angle, distance) {
-        const overlap = (item.radius + otherItem.radius - distance) / 2;
+        const overlap = (item.radius + otherItem.radius - distance) / 10;
         const xOffset = overlap * Math.cos(angle);
         const yOffset = overlap * Math.sin(angle);
 
-        if (!item.static) {
-            item.x += xOffset;
-            item.y += yOffset;
-        }
-
-        if(!otherItem.static) {
-            otherItem.x -= xOffset;
-            otherItem.y -= yOffset;
-        } 
+        item.x += xOffset;
+        item.y += yOffset;
+        otherItem.x -= xOffset;
+        otherItem.y -= yOffset;
     }
 
     getCoordinatesDifferences(item, otherItem) {
@@ -66,10 +53,10 @@ export default class PhysicsEngine {
     }
 
     setVelocity(item, angle) {
-        const magnitude = this.getMagnitude(item.velocityX, item.velocityY);
-        const direction = Math.atan2(item.velocityY, item.velocityX);
-        item.velocityX = magnitude * Math.cos(direction - angle) * this.restitution;
-        item.velocityY = magnitude * Math.sin(direction - angle) * this.restitution;
+        const magnitude = this.getMagnitude(item.vx, item.vx);
+        const direction = Math.atan2(item.vy, item.vy);
+        item.vx = magnitude * Math.cos(direction - angle) * this.restitution;
+        item.vy = magnitude * Math.sin(direction - angle) * this.restitution;
     }
 
     getMagnitude(x, y) {
@@ -77,16 +64,17 @@ export default class PhysicsEngine {
     }
 
     checkCollisionWithBoundaries(item) {
-        if (item.x - item.radius < 0 || item.x + item.radius > canvasConstants.CANVAS_WIDTH) {
-            item.velocityX *= -this.restitution;
+        const kingdom = document.aBird.placerEngine.kingdom;
+        if (item.x - item.radius < 0 || item.x + item.radius > kingdom.width) {
+            item.vx *= -this.restitution;
         }
 
         if (item.y - item.radius < 0) {
-            item.velocityY *= -this.restitution;
+            item.vy *= -this.restitution;
             item.y = item.static ? item.y : item.radius;
-        } else if (item.y + item.radius > canvasConstants.CANVAS_HEIGHT) {
-            item.velocityY *= -this.restitution;
-            item.y = item.static ? item.y : canvasConstants.CANVAS_HEIGHT - item.radius;
+        } else if (item.y + item.height > kingdom.height) {
+            item.vy *= -this.restitution;
+            item.y =  kingdom.height - item.height;
         }
     }
 }

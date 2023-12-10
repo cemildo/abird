@@ -21,7 +21,6 @@ export default class RenderEngine {
     this.setBackground();
     document.aBird.placerEngine.initialActions();
     document.aBird.playerEngine.initialActions();
-
     this.render();
   }
 
