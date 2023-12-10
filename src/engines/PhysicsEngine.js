@@ -1,5 +1,5 @@
 import canvasConstants from "../constants/canvas-constants";
-import {rectangleCollision} from "../utils/Collision";
+import {movingCircleCollision, rectangleCollision} from "../utils/Collision";
 export default class PhysicsEngine {
     gravity = 0.4;
     restitution = 0.8;
@@ -14,7 +14,7 @@ export default class PhysicsEngine {
         this.items.forEach(item => {
 
             item.vy += this.gravity;
-            item.y += item.vy;
+            item.y += item.static ? 0: item.vy;
 
             this.checkCollisionWithBoundaries(item);
             this.checkCollisionWithOtherItems(item);
@@ -40,9 +40,9 @@ export default class PhysicsEngine {
         const yOffset = overlap * Math.sin(angle);
 
         item.x += xOffset;
-        item.y += yOffset;
+        item.y += item.static ? 0 : yOffset;
         otherItem.x -= xOffset;
-        otherItem.y -= yOffset;
+        otherItem.y -= item.static ? 0 : yOffset;
     }
 
     getCoordinatesDifferences(item, otherItem) {
@@ -55,8 +55,8 @@ export default class PhysicsEngine {
     setVelocity(item, angle) {
         const magnitude = this.getMagnitude(item.vx, item.vx);
         const direction = Math.atan2(item.vy, item.vy);
-        item.vx = magnitude * Math.cos(direction - angle) * this.restitution;
-        item.vy = magnitude * Math.sin(direction - angle) * this.restitution;
+        item.vx = item.static ? 0 : magnitude * Math.cos(direction - angle) * this.restitution;
+        item.vy = item.static ? 0 : magnitude * Math.sin(direction - angle) * this.restitution;
     }
 
     getMagnitude(x, y) {
@@ -71,10 +71,10 @@ export default class PhysicsEngine {
 
         if (item.y - item.radius < 0) {
             item.vy *= -this.restitution;
-            item.y = item.static ? item.y : item.radius;
+            item.y = item.static ? item.y : item.height;
         } else if (item.y + item.height > kingdom.height) {
             item.vy *= -this.restitution;
-            item.y =  kingdom.height - item.height;
+            item.y = item.static ? item.y : kingdom.height - item.height;
         }
     }
 }

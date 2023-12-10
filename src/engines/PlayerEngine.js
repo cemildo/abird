@@ -212,12 +212,11 @@ export default class PlayerEngine {
     const kingdomPieces = document.aBird.placerEngine.kingdom;
     document.aBird.physicEngine.setItems(kingdomPieces.children);
     document.aBird.physicEngine.run();
-
     kingdomPieces.children.forEach(brick => {
 
       if(movingCircleCollision(brick, this.bird, true)) {
         this.dust.stop();
-        if(kingdomPieces) {
+        if(kingdomPieces && !brick.static) {
           kingdomPieces.removeChild(brick);
         }
       }

@@ -358,7 +358,7 @@ function movingCircleCollision(c1, c2, global = false) {
     c1.vy = c1.bounce.y / c1.mass;
     c2.vx = c2.bounce.x / c2.mass;
     c2.vy = c2.bounce.y / c2.mass;
-    console.log(c1.vx, c1.vy, c2.vx, c2.vy)
+
 
   }
   return hit;

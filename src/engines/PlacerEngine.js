@@ -72,7 +72,9 @@ export default class PlacerEngine {
         assets["pig-3.png"],
       ];
 
-      const displayItem = sprite(displayElements[randomInt(0, displayElements.length -1)], 1, 1);
+      const randomIndex = randomInt(0, displayElements.length -1);
+      const displayItem = sprite(displayElements[randomIndex], 1, 1);
+      //displayItem.static = [0,5].includes(randomIndex);
       displayItem.height = 50;
       displayItem.width = 50;
       displayItem.circular = true;
@@ -85,10 +87,11 @@ export default class PlacerEngine {
       return displayItem;
     }
 
-    new Array(30).fill(1)
+    const a = new Array(30).fill(1)
     .map(() => woodFn())
-    .map(this.setKingdomSize.bind(this))
-    .forEach(a => this.kingdom.addChild(a));
+    .map(this.setKingdomSize.bind(this));
+
+    a.forEach(a => this.kingdom.addChild(a));
   }
 
   setKingdomSize(wood, i) {
