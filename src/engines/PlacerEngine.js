@@ -1,10 +1,11 @@
-import {circle, grid, rectangle, sprite} from "../utils/Display";
+import {rectangle, sprite} from "../utils/Display";
 import canvasConstants from "../constants/canvas-constants";
 import {assets, randomInt} from "../utils/Asset";
 
 export default class PlacerEngine {
   container;
   kingdom;
+  players;
 
   constructor() {
     this.setShootingHillContainer();
@@ -13,18 +14,47 @@ export default class PlacerEngine {
   initialActions() {
     this.setShootingHill();
     this.setWeapon();
-    this.setKingdom()
+    this.setKingdom();
+    this.setPlayersContainer();
+  }
+
+  setPlayersContainer() {
+    this.players = rectangle(450, 60, "none", "none");
+    this.players.name = "player-container"
+    this.players.x = 50;
+    this.players.y = 150;
+    this.setPlayers();
+  }
+
+  setPlayers() {
+    const players = [sprite(assets["white-bird-1.png"], 0, 0),
+      sprite(assets["black-bird-1.png"], 0, 0),
+      sprite(assets["green-bird-1.png"], 0, 0)];
+
+    players.forEach((sprite, i) => {
+      const player = sprite;
+      player.height = 80;
+      player.width = 80;
+      player.circular = true;
+      player.radius = 40;
+      player.mass = 0.02;
+      player.vy = 0;
+      player.gravity = 0.4;
+      player.x = i * player.width + 10
+      player.y = 0;
+      this.players.addChild(player);
+    });
   }
 
   setWeapon() {
     const childrenSize = this.container.children
     .filter(a => a.tilesetFrame.frame.name !== 'weapon')
-    .filter((a,i) => i % 4 === 0)
-    .reduce((s,c)=> {
+    .filter((a, i) => i % 4 === 0)
+    .reduce((s, c) => {
       s.height += c.height;
       s.width += c.width;
       return s;
-    }, { height: 0, width: 0})
+    }, {height: 0, width: 0})
 
     const weapon = sprite(assets["weapon.png"], 1, 1);
     weapon.height = 100;
@@ -72,9 +102,8 @@ export default class PlacerEngine {
         assets["pig-3.png"],
       ];
 
-      const randomIndex = randomInt(0, displayElements.length -1);
+      const randomIndex = randomInt(0, displayElements.length - 1);
       const displayItem = sprite(displayElements[randomIndex], 1, 1);
-      //displayItem.static = [0,5].includes(randomIndex);
       displayItem.height = 50;
       displayItem.width = 50;
       displayItem.circular = true;
@@ -123,4 +152,5 @@ export default class PlacerEngine {
     this.container.x = 50;
     this.container.y = canvasConstants.CANVAS_HEIGHT - this.container.height;
   }
+
 }

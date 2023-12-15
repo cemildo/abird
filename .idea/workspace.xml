@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c071aed-6bd6-4db8-9fc0-c54cd885e46f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b69979cc28f4f17398deb034039e764135f7fc2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b69979cc28f4f17398deb034039e764135f7fc2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/326564744d3b1b13368fa648ba863b1fe975742e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/326564744d3b1b13368fa648ba863b1fe975742e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6ace30ace2a8d25371aa2b7c5431b9c9d45c6adc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6ace30ace2a8d25371aa2b7c5431b9c9d45c6adc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b1473743e122f4461610e6718f7db201115fe77" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b1473743e122f4461610e6718f7db201115fe77" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/933df156f307b3d160a783e53e07ca3f1a7a4250" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/933df156f307b3d160a783e53e07ca3f1a7a4250" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e420acfdde56eda6b628b2f895a2621d7bbafc38" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e420acfdde56eda6b628b2f895a2621d7bbafc38" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa54d18525da75243345450f8e520cb095a407f6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa54d18525da75243345450f8e520cb095a407f6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/PhysicsEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PhysicsEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/PlacerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlacerEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/PlayerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlayerEngine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/objects.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/objects.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/figures.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/figures.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Collision.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Collision.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +90,9 @@
       <workItem from="1697541780164" duration="633000" />
       <workItem from="1699808862952" duration="41100000" />
       <workItem from="1700316237905" duration="1204000" />
-      <workItem from="1702022701054" duration="54544000" />
+      <workItem from="1702022701054" duration="57296000" />
+      <workItem from="1702550414552" duration="599000" />
+      <workItem from="1702652616224" duration="8895000" />
     </task>
     <servers />
   </component>

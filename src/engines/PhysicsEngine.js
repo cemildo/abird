@@ -25,7 +25,7 @@ export default class PhysicsEngine {
     checkCollisionWithOtherItems(item) {
         this.items.forEach(otherItem => {
             if (item !== otherItem) {
-                if (rectangleCollision(item, otherItem, true, true)) {
+                if (rectangleCollision(item, otherItem, false, true)) {
                     this.setVelocity(item, Math.PI / 2);
                     this.setVelocity(otherItem, Math.PI / 2);
                     this.avoidSticking(item, otherItem, Math.PI / 2, item.width);

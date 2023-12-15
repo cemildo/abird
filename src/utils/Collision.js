@@ -245,6 +245,7 @@ function movingCircleCollision(c1, c2, global = false) {
   c1.mass = c1.mass || 1;
   c2.mass = c2.mass || 1;
 
+
   //Calculate the vector between the circles’ center points
   if (global) {
     //Use global coordinates
@@ -354,11 +355,17 @@ function movingCircleCollision(c1, c2, global = false) {
 
     //Add the bounce vector to the circles' velocity
     //and add mass if the circle has a mass property
+  /*
     c1.vx = c1.bounce.x / c1.mass;
     c1.vy = c1.bounce.y / c1.mass;
     c2.vx = c2.bounce.x / c2.mass;
     c2.vy = c2.bounce.y / c2.mass;
+  */
 
+    c1.vx -= Math.abs(c1.bounce.x / c1.mass);
+    c1.vy -= Math.abs(c1.bounce.y / c1.mass);
+    c2.vx = c2.bounce.x / c2.mass;
+    c2.vy = c2.bounce.y / c2.mass;
 
   }
   return hit;

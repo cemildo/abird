@@ -8,6 +8,7 @@ import {
 } from "../utils/Display";
 import {assets, contain, wait} from "../utils/Asset";
 import {
+  hitTestCircle,
   movingCircleCollision
 } from "../utils/Collision";
 
@@ -31,9 +32,9 @@ export default class PlayerEngine {
 
     this.restarted = true;
     this.bird = this.bird || sprite(assets["red-bird-1.png"], 0, 0);
-    this.bird.height = 50;
-    this.bird.width = 50;
-    this.bird.diameter = 50;
+    this.bird.height = 60;
+    this.bird.width = 60;
+    this.bird.diameter = 30;
     this.bird.x = shootingHillContainer.x + weapon.x - 20;
     this.bird.y = shootingHillContainer.y + weapon.y;
     this.bird.draggable = true;
@@ -49,7 +50,7 @@ export default class PlayerEngine {
     this.bird.frictionY = 5;
 
     //Set the mass based on the ball's diameter
-    this.bird.mass = 0.75 + (this.bird.diameter / 32);
+    this.bird.mass = 5;
     this.setParticleEffect();
   }
 
@@ -80,7 +81,7 @@ export default class PlayerEngine {
       }
 
     } else {
-      this.bird.frictionX = 1;
+     this.bird.frictionX = 1;
     }
   }
 
@@ -214,9 +215,9 @@ export default class PlayerEngine {
     document.aBird.physicEngine.run();
     kingdomPieces.children.forEach(brick => {
 
-      if(movingCircleCollision(brick, this.bird, true)) {
+      if(movingCircleCollision(this.bird, brick,true)) {
         this.dust.stop();
-        if(kingdomPieces && !brick.static) {
+        if(kingdomPieces) {
           kingdomPieces.removeChild(brick);
         }
       }
@@ -273,4 +274,7 @@ export default class PlayerEngine {
     })
   }
 
+  isBirdFlying(e) {
+    return hitTestCircle(this.bird, {centerX: e.x, centerY: e.y} );
+  }
 }
