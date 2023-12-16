@@ -65,8 +65,6 @@ export let assets = {
       //resolves the Promise when everything has loaded
       let loadHandler = () => {
         this.loaded += 1;
-        console.log(this.loaded);
-
         //Check whether everything has loaded
         if (this.toLoad === this.loaded) {
 
@@ -74,7 +72,6 @@ export let assets = {
           //to load more assets later if you need to
           this.toLoad = 0;
           this.loaded = 0;
-          console.log("Assets finished loading");
 
           //Resolve the promise
           resolve();
@@ -83,7 +80,6 @@ export let assets = {
 
       //Display a console message to confirm that the assets are
       //being loaded
-      console.log("Loading assets...");
 
       //Find the number of files that need to be loaded
       this.toLoad = sources.length;

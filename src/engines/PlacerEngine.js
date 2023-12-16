@@ -1,11 +1,14 @@
-import {rectangle, sprite} from "../utils/Display";
+import {rectangle, sprite, stage, text} from "../utils/Display";
 import canvasConstants from "../constants/canvas-constants";
 import {assets, randomInt} from "../utils/Asset";
 
 export default class PlacerEngine {
   container;
   kingdom;
+  playersContainer;
   players;
+  weapon;
+  deadBirds = [];
 
   constructor() {
     this.setShootingHillContainer();
@@ -13,37 +16,65 @@ export default class PlacerEngine {
 
   initialActions() {
     this.setShootingHill();
-    this.setWeapon();
     this.setKingdom();
+    this.setWeapon();
     this.setPlayersContainer();
   }
 
   setPlayersContainer() {
-    this.players = rectangle(450, 60, "none", "none");
-    this.players.name = "player-container"
-    this.players.x = 50;
-    this.players.y = 150;
+    if (this.playersContainer) {
+      stage.remove(this.playersContainer);
+    }
+
+    this.playersContainer = rectangle(450, 60, "none", "none");
+    this.playersContainer.name = "player-container"
+    this.playersContainer.x = 50;
+    this.playersContainer.y = 150;
     this.setPlayers();
   }
 
   setPlayers() {
-    const players = [sprite(assets["white-bird-1.png"], 0, 0),
-      sprite(assets["black-bird-1.png"], 0, 0),
-      sprite(assets["green-bird-1.png"], 0, 0)];
+    let players = [
+      {
+        sprite: assets["white-bird-1.png"],
+        mass: 3
+      },
+      {
+        sprite: assets["black-bird-1.png"],
+        mass: 4
+      },
+      {
+        sprite: assets["green-bird-1.png"],
+        mass: 2
+      },
+      {
+        sprite: assets["red-bird-1.png"],
+        mass: 5
+      }
+    ];
 
-    players.forEach((sprite, i) => {
-      const player = sprite;
+    this.players = players.map((item, i) => {
+      const player = this.deadBirds.includes(i)
+          ? sprite(assets["white-cloud"], 0, 0)
+          : sprite(item.sprite, 0, 0);
+
       player.height = 80;
       player.width = 80;
       player.circular = true;
       player.radius = 40;
-      player.mass = 0.02;
+      player.mass = item.mass;
       player.vy = 0;
       player.gravity = 0.4;
-      player.x = i * player.width + 10
+      player.x = i * 80 + 10
       player.y = 0;
-      this.players.addChild(player);
+      return player;
     });
+
+    this.players.forEach(a => this.playersContainer.addChild(a));
+  }
+
+  markBirdAsDead(index) {
+    this.deadBirds.push(index);
   }
 
   setWeapon() {
@@ -56,12 +87,13 @@ export default class PlacerEngine {
       return s;
     }, {height: 0, width: 0})
 
-    const weapon = sprite(assets["weapon.png"], 1, 1);
-    weapon.height = 100;
-    weapon.width = 20;
-    weapon.x = childrenSize.width - 40;
-    weapon.y = this.container.height - childrenSize.height - weapon.height;
-    this.container.addChild(weapon);
+    this.weapon = sprite(assets["weapon.png"], 1, 1);
+    this.weapon.height = 100;
+    this.weapon.width = 20;
+    this.weapon.x = childrenSize.width - 40;
+    this.weapon.y = this.container.height - childrenSize.height
+        - this.weapon.height;
+    this.container.addChild(this.weapon);
   }
 
   setShootingHill() {
@@ -109,6 +141,7 @@ export default class PlacerEngine {
       displayItem.circular = true;
       displayItem.radius = 25;
       displayItem.mass = 0.02;
+      displayItem.isPig = [1,2,3,4,6,8].includes(randomIndex)
       displayItem.vy = 0;
       displayItem.gravity = 0.4;
       displayItem.x = this.kingdom.x;
@@ -153,4 +186,15 @@ export default class PlacerEngine {
     this.container.y = canvasConstants.CANVAS_HEIGHT - this.container.height;
   }
 
+  resultMessage(message) {
+    this.resultContainer = rectangle(400, 320, "white", "none");
+    this.resultContainer.name = "result-container"
+    this.resultContainer.x = canvasConstants.CANVAS_WIDTH / 2 - this.resultContainer.width/2;
+    this.resultContainer.y = canvasConstants.CANVAS_HEIGHT / 2 - this.resultContainer.height/2;
+
+    const result = text(message, "28px sans-serif", "black");
+    result.x = 20;
+    result.y = (this.resultContainer.height / 2) - 16;
+    this.resultContainer.addChild(result);
+  }
 }

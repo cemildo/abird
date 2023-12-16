@@ -9,7 +9,12 @@ export default class AssetLoaderEngine {
        "images/objects.png",
        "images/objects.json",
        "images/star.png",
-       "images/red-star.png"
+       "images/red-star.png",
+         "sounds/completed.mp3",
+         "sounds/bounce.mp3",
+         "sounds/flying.mp3",
+         "sounds/forest.mp3",
+         "sounds/streching.mp3",
      ]);
    }
 }

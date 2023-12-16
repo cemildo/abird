@@ -5,19 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c071aed-6bd6-4db8-9fc0-c54cd885e46f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b69979cc28f4f17398deb034039e764135f7fc2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0b69979cc28f4f17398deb034039e764135f7fc2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/326564744d3b1b13368fa648ba863b1fe975742e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/326564744d3b1b13368fa648ba863b1fe975742e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6ace30ace2a8d25371aa2b7c5431b9c9d45c6adc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6ace30ace2a8d25371aa2b7c5431b9c9d45c6adc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b1473743e122f4461610e6718f7db201115fe77" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b1473743e122f4461610e6718f7db201115fe77" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/933df156f307b3d160a783e53e07ca3f1a7a4250" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/933df156f307b3d160a783e53e07ca3f1a7a4250" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e420acfdde56eda6b628b2f895a2621d7bbafc38" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e420acfdde56eda6b628b2f895a2621d7bbafc38" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa54d18525da75243345450f8e520cb095a407f6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa54d18525da75243345450f8e520cb095a407f6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/angrybirds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sounds/bounce.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sounds/completed.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sounds/flying.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sounds/flying2.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sounds/forest.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sounds/streching.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/986e8e88e0fafee39cdc049c1d8938fabc8dd526" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/986e8e88e0fafee39cdc049c1d8938fabc8dd526" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engines/PhysicsEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PhysicsEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/AssetLoaderEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/AssetLoaderEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/CoreEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/CoreEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/PlacerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlacerEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/PlayerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlayerEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engines/SoundEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/SoundEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/images/figures.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/figures.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Collision.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Collision.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Asset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Asset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +67,7 @@
       <recent name="$PROJECT_DIR$/src/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/sounds" />
       <recent name="$PROJECT_DIR$/src/images" />
     </key>
   </component>
@@ -92,7 +101,8 @@
       <workItem from="1700316237905" duration="1204000" />
       <workItem from="1702022701054" duration="57296000" />
       <workItem from="1702550414552" duration="599000" />
-      <workItem from="1702652616224" duration="8895000" />
+      <workItem from="1702652616224" duration="15781000" />
+      <workItem from="1702675366065" duration="7469000" />
     </task>
     <servers />
   </component>

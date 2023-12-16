@@ -47,6 +47,10 @@
 	"green-bird-1.png":
 	{
 		"frame": {"x":815,"y":639,"w":100,"h":73, "name": "green-bird"}
+	},
+	"white-cloud":
+	{
+		"frame": {"x":42,"y":824,"w":116,"h":114, "name": "white-cloud"}
 	}
 },
 	"meta": {

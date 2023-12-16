@@ -1,34 +1,43 @@
 
 import play from "play-audio-notify";
+import {assets} from "../utils/Asset";
 
 export default class SoundEngine {
-  sounds = {};
-  player;
-  sounds = {
-    GAME_INTRO: { name: 'GAME_INTRO', player: play(['./sound/intro.mp3']) }, 
-    SECTION_INTRO: { name: 'SECTION_INTRO', player: play(['./sound/section_entry.mp3']) },
-    PIG_SOUND: { name: 'PIG_SOUND', player: play(['./sound/pig_sound.mp3']) }
-  };
+   forest;
+   completed;
+   bounce;
+   flying;
 
-  initialActions() { 
-    this.play(this.sounds.GAME_INTRO.name);
+  playForest(){
+    this.forest = assets["sounds/forest.mp3"];
+    this.forest.loop = false;
+    this.forest.pan = -0.8;
+    this.forest.volume = 1;
+    this.forest.play();
   }
 
-  play(soundName){
-    if(Object.keys(this.sounds).includes(soundName)) {
-      this.sounds[soundName].player.controls().loop().play();
-    }
+  playCompleted(){
+    this.completed = assets["sounds/completed.mp3"];
+    this.completed.loop = false;
+    this.completed.pan = -0.8;
+    this.completed.volume = 2;
+    this.completed.play();
   }
 
-  playOnce(soundName){
-    if(Object.keys(this.sounds).includes(soundName)) {
-      this.sounds[soundName].player.play();
-    }
+  playBounce(){
+    this.bounce = assets["sounds/bounce.mp3"];
+    this.bounce.loop = false;
+    this.bounce.pan = -0.8;
+    this.bounce.volume = 2;
+    this.bounce.play();
   }
 
-  stop(soundName) {
-    if(Object.keys(this.sounds).includes(soundName)) {
-      this.sounds[soundName].player.muted();
-    }
+  playFlying(){
+    this.flying = assets["sounds/flying.mp3"];
+    this.flying.loop = false;
+    this.flying.pan = -0.8;
+    this.flying.volume = 2;
+    this.flying.play();
   }
+
 }

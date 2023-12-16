@@ -8,14 +8,16 @@ import AssetLoaderEngine from "./AssetLoaderEngine";
 import PlacerEngine from "./PlacerEngine";
 import PathFinderEngine from "./PathFinderEngine";
 
-export const engines = {
-    renderEngine: new RenderEngine(),
-    physicEngine: new PhysicsEngine(),
-    playerEngine: new PlayerEngine(),
-    swingEngine: new SwingEngine(),
-    inputEngine: new InputEngine(),
-    assetEngine: new AssetLoaderEngine(),
-    placerEngine: new PlacerEngine(),
-    pathFinderEngine: new PathFinderEngine()
-    // soundEngine: new SoundEngine()
+export const engines = () => {
+    return {
+        renderEngine: new RenderEngine(),
+        physicEngine: new PhysicsEngine(),
+        playerEngine: new PlayerEngine(),
+        swingEngine: new SwingEngine(),
+        inputEngine: new InputEngine(),
+        assetEngine: new AssetLoaderEngine(),
+        placerEngine: new PlacerEngine(),
+        pathFinderEngine: new PathFinderEngine(),
+        soundEngine: new SoundEngine()
+    }
 }
