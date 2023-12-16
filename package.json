@@ -28,6 +28,5 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "play-audio-notify": "^0.0.3"
   }
 }

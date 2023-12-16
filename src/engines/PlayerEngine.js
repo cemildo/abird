@@ -98,7 +98,6 @@ export default class PlayerEngine {
       }
 
     } else {
-      document.aBird.soundEngine.playFlying();
       this.bird.frictionX = 1;
     }
   }
@@ -132,6 +131,7 @@ export default class PlayerEngine {
     };
 
     pointer.release = () => {
+      document.aBird.soundEngine.playFlying();
       this.removeRoute();
       this.dust.play();
       this.bird.draggable = true;
@@ -232,6 +232,7 @@ export default class PlayerEngine {
       if (movingCircleCollision(this.bird, brick, true)) {
         this.dust.stop();
         if (kingdomPieces) {
+          document.aBird.soundEngine.stopFlying();
           document.aBird.soundEngine.playBounce();
           kingdomPieces.removeChild(brick);
         }

@@ -166,7 +166,6 @@ class Sound {
       this.soundNode.stop(this.actx.currentTime);
       this.startOffset += this.actx.currentTime - this.startTime;
       this.playing = false;
-      console.log(this.startOffset);
     }
   }
 

@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c071aed-6bd6-4db8-9fc0-c54cd885e46f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/images/angrybirds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sounds/bounce.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sounds/completed.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sounds/flying.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sounds/flying2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sounds/forest.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sounds/streching.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/986e8e88e0fafee39cdc049c1d8938fabc8dd526" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/986e8e88e0fafee39cdc049c1d8938fabc8dd526" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/933df156f307b3d160a783e53e07ca3f1a7a4250" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/933df156f307b3d160a783e53e07ca3f1a7a4250" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d61b3282aa3817e60c6f6207985342ca7fbf476c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d61b3282aa3817e60c6f6207985342ca7fbf476c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engines/AssetLoaderEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/AssetLoaderEngine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engines/CoreEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/CoreEngine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engines/PlacerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlacerEngine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/PlayerEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/PlayerEngine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/engines/SoundEngine.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/engines/SoundEngine.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/figures.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/figures.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Asset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Asset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Sound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Sound.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +89,7 @@
       <workItem from="1702022701054" duration="57296000" />
       <workItem from="1702550414552" duration="599000" />
       <workItem from="1702652616224" duration="15781000" />
-      <workItem from="1702675366065" duration="7469000" />
+      <workItem from="1702675366065" duration="11389000" />
     </task>
     <servers />
   </component>
